@@ -16,11 +16,31 @@ const ingredients = [
 //   list.append(itemEl)
 // }
 
+
+
+
+
+// Сделала несколько вариантов решения
+
+
+
+// const list = document.querySelector('#ingredients');
+
+// ingredients.map((ingredient) => {
+//   const itemEl = document.createElement('li');
+//   itemEl.textContent = ingredient;
+
+//   list.append(itemEl)
+// })
+
+
+
+
 const list = document.querySelector('#ingredients');
 
 ingredients.map((ingredient) => {
   const itemEl = document.createElement('li');
-  itemEl.textContent = ingredient;
 
+  itemEl.append(ingredient);
   list.append(itemEl)
 })
