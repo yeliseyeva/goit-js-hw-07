@@ -7,6 +7,18 @@ const ingredients = [
   'Приправы',
 ];
 
+
+const list = document.querySelector('#ingredients');
+
+const ingredientLi = ingredients.map((ingredient) => {
+  const itemEl = document.createElement('li');
+  itemEl.textContent = ingredient;
+
+  return itemEl;
+})
+
+list.append(...ingredientLi)
+
 // for (const ingredient of ingredients) {
 //   const itemEl = document.createElement('li');
 //   itemEl.textContent = ingredient;
@@ -49,16 +61,16 @@ const ingredients = [
 
 
 
-const list = document.querySelector('#ingredients');
+// const list = document.querySelector('#ingredients');
 
-const array = [];
+// const array = [];
 
-ingredients.map((ingredient) => {
-  const itemEl = document.createElement('li');
+// ingredients.map((ingredient) => {
+//   const itemEl = document.createElement('li');
 
-  itemEl.textContent = ingredient;
+//   itemEl.textContent = ingredient;
 
-  array.push(itemEl)
+//   array.push(itemEl)
 
-  list.append(...array)
-})
+//   list.append(...array)
+// })
