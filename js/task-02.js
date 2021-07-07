@@ -36,11 +36,29 @@ const ingredients = [
 
 
 
+// const list = document.querySelector('#ingredients');
+
+// ingredients.map((ingredient) => {
+//   const itemEl = document.createElement('li');
+
+//   itemEl.append(ingredient);
+//   list.append(itemEl)
+// })
+
+
+
+
+
 const list = document.querySelector('#ingredients');
+
+const array = [];
 
 ingredients.map((ingredient) => {
   const itemEl = document.createElement('li');
 
-  itemEl.append(ingredient);
-  list.append(itemEl)
+  itemEl.textContent = ingredient;
+
+  array.push(itemEl)
+
+  list.append(...array)
 })
